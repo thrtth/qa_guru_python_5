@@ -10,11 +10,6 @@ def open_browser():
     yield
     browser.close()
 
-# @pytest.fixture
-# def close_browser():
-#     yield
-#     browser.close()
-
 
 def test_search_selene(open_browser):
     browser.element('[name="q"]').should(be.blank).type('yashaka/selene').press_enter()
